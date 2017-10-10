@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	
+	<bean id="B1" class="com.ioc.BeanOne" >
+		<constructor-arg value="Madan"> </constructor-arg>
+		<constructor-arg value="Madan@infor.com"> </constructor-arg>
+	</bean>
+	<bean id="B2" class="com.ioc.BeanTwo">
+		
+		<constructor-arg value="1992"></constructor-arg>
+		<constructor-arg value="12" ></constructor-arg>
+	</bean>
+	
+	<bean class="com.ioc.BeanThree" id="B3" >
+		<constructor-arg>
+			<map>
+				<entry key="A" value-ref="B1"  ></entry>
+				<entry key="B" value="33"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+</beans>
+	
